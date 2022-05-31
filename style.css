@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');     /* imports custom font */
+
+/* 
+The box-sizing property allows us to include the padding and border in an element's total width and height.
+If you set box-sizing: border-box; on an element, padding and border are included in the width and height:
+*/
+* {
+    box-sizing: border-box;     
+}
+
+body {
+    background-color: #7bdaf3;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+}
+
+.notes-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 3rem;
+    margin-left: 3rem;
+}
+
+.notes {
+    background-color: transparent;
+    width: 200px;
+    height: 240px;
+    margin: 1rem 1rem 3rem 0.5rem;
+}
+
+.notes .tools {
+    background-color: #d2efa9;
+    box-shadow: 0 0 10px black;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    height: 36px;
+}
+
+.notes .tools button {
+    border: none;
+    background-color: transparent;
+    color: black;
+    font-size: 1rem;
+    margin-left: 0.3rem;
+    cursor: pointer;
+}
+
+.notes .main {
+    background-color: #eee;
+    box-shadow: 0 0 10px black;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.notes textarea {
+    box-shadow: 0 0 10px black;
+    outline: none;
+    font-family: inherit;
+    font-size: 0.8rem;
+    width: 100%;
+    height: 100%;
+    max-width: 200px;
+    max-height: 240px;
+    min-width: 200px;
+    border: none;
+}
+
+.notes .hidden {     /* hidden class hdies the markdown text */
+    display: none;
+}
+
+#add-note {
+    margin-right: auto;     /* auto will put the item add the other end of flex box */
+}
+
+.fa-plus {
+    position: absolute;     /* when increasing padding container does not increase with it */
+    top: 0px;
+    left: 0px;
+    padding: 10px 10px 10px 10px;
+}
+
+.fa-plus:hover,
+.fa-trash-alt:hover,
+.fa-edit:hover,
+#new-note:hover {
+    background-color: #9da990;
+}
+
+.fa-plus:active,
+.fa-trash-alt:active,
+.fa-edit:active,
+#new-note:active {
+    background-color: gray;
+}
+
+.fa-trash-alt {
+    position: absolute;     /* when increasing padding container does not increase with it */
+    top: 0px;
+    right: 0px;
+    padding: 10px 10px 10px 10px;
+}
+
+.fa-edit {
+    position: absolute;     /* when increasing padding container does not increase with it */
+    top: 0px;
+    right: 34px;
+    padding: 10px 10px 10px 10px;
+}
+
+#new-note {
+    background-color: #d2efa9;
+    box-shadow: 0 0 5px rgb(0, 0, 0);
+    color: black;
+    border: none;   
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    margin: 1rem 1rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
